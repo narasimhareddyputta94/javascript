@@ -39,6 +39,8 @@ switch (num) {
         break;
 }
 
+
+
 var num = 10;
 switch (num) {
     case 10:
@@ -54,3 +56,29 @@ switch (num) {
         console.log('default');
 
 }
+
+var num_1 = 10;
+
+for(var i = 0; i < num_1; i++) {
+    console.log(i);
+}
+
+console.log('----------------------');
+
+
+var num_2 = 10;
+var i = 0;
+while(i < num_2) {
+    console.log(i*2);
+    i++;
+}
+
+console.log('----------------------');
+
+var num_3 = 10;
+var i = 0;
+do {
+    console.log(i*10);
+    i++;
+}
+while(i < num_3);

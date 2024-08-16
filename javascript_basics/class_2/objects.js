@@ -113,3 +113,57 @@ console.log(fruitsCopy2);
 
 let removedFruits = fruits.splice(1, 2); // ["Orange", "Mango"], fruits is now ["Strawberry"]
 console.log(removedFruits);
+
+
+function add(a, b) {
+    return a + b;
+}
+
+let sum = add(5, 10); // 15
+
+console.log(sum);
+
+function greet(name) {
+    return "Hello, " + name;
+
+}
+
+let greeting = greet("John"); // "Hello, John"
+
+console.log(greeting);
+
+function isEven(num) {
+    return num % 2 === 0;
+
+}
+
+let even = isEven(6); // true
+
+console.log(even);
+
+function getGrade(marks) {
+    if (marks >= 80) {
+        return "A";
+    } else if (marks >= 60) {
+        return "B";
+    } else if (marks >= 40) {
+        return "C";
+    } else {
+        return "F";
+    }
+}
+
+let grade = getGrade(75); // "B"
+
+console.log(grade);
+
+console.log(sum(1,2));
+console.log(total(1,2));
+
+function sum(a, b) {
+    return a + b;
+}
+
+var total = function(a, b) {
+    return a + b;
+}

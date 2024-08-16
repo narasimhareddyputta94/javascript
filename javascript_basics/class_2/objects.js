@@ -70,5 +70,46 @@ console.log(biodata.isMarried);
 biodata.isGraduated = false;
 
 delete biodata.salary;
-
 console.log(biodata);
+
+// Using square brackets
+let fruits = ["Apple", "Banana", "Mango"];
+console.log(fruits);
+
+// Using the Array constructor
+let numbers = new Array(1, 2, 3, 4);
+console.log(numbers);
+
+let firstFruit = fruits[0]; // "Apple"
+console.log(firstFruit);
+
+let secondNumber = numbers[1]; // 2
+console.log(secondNumber);
+
+fruits[1] = "Orange"; // Now fruits is ["Apple", "Orange", "Mango"]
+console.log(fruits);
+
+let size = fruits.length; // 3
+console.log(size);
+
+fruits.push("Pineapple"); // ["Apple", "Orange", "Mango", "Pineapple"]
+console.log(fruits);
+
+let lastFruit = fruits.pop(); // "Pineapple", fruits is now ["Apple", "Orange", "Mango"]
+console.log(lastFruit);
+
+let firstFruitRemoved = fruits.shift(); // "Apple", fruits is now ["Orange", "Mango"]
+console.log(firstFruitRemoved);
+
+fruits.unshift("Strawberry");// ["Strawberry", "Orange", "Mango"]
+console.log(fruits);
+
+
+let fruitsCopy = fruits.slice(); // ["Strawberry", "Orange", "Mango"]
+console.log(fruitsCopy);
+
+let fruitsCopy2 = fruits.slice(1, 3); // ["Orange", "Mango"]
+console.log(fruitsCopy2);
+
+let removedFruits = fruits.splice(1, 2); // ["Orange", "Mango"], fruits is now ["Strawberry"]
+console.log(removedFruits);

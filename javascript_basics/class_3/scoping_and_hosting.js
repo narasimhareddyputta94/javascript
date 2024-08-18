@@ -59,3 +59,29 @@ hoistedFunction(); // Outputs: I'm a hoisted function!
 function hoistedFunction() {
     console.log("I'm a hoisted function!");
 }
+
+// this is not good practice because it causes unexpected errors and bugs
+function sum(a, b) {
+    total = a+b;
+    return total;
+}
+var result = sum(10, 20);
+console.log(total,result); // 30
+
+// this is good practice
+var total;
+function sum(a, b) {
+     total = a+b;
+    return total;
+}
+var result = sum(10, 20);
+console.log(total,result); // Uncaught ReferenceError: total is not defined
+
+function sum(a, b) {
+    let total = a+b;
+    return total;
+}
+let result1 = sum(10, 20);
+console.log(result1,sum);
+
+

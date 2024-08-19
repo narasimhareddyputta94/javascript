@@ -115,3 +115,9 @@ console.log("-----------");
 
 //ex-9
 
+function double(arr1){
+    var arr = [];
+    arr1.forEach(function(item,idx){arr.push(item*2)});
+    return arr;
+}
+console.log(double(arr4));

@@ -116,8 +116,88 @@ console.log("-----------");
 //ex-9
 
 function double(arr1){
-    var arr = [];
-    arr1.forEach(function(item,idx){arr.push(item*2)});
-    return arr;
+    // var arr = [];
+    // arr1.forEach(function(item,idx){arr.push(item*2)});
+    // return arr;
+    const result = arr1.map(function(item,idx){
+        return item*2;
+    });
+    return result;
 }
 console.log(double(arr4));
+console.log("-----------");
+
+//ex-10
+let arr5 = ['narasimha','vinay','ragav','vinodh','maniac'];
+
+function uppercase(arr){
+    return arr.map(function (item,idx){
+        return item.toUpperCase();
+    })
+}
+
+console.log(uppercase((arr5)));
+console.log("-----------");
+
+console.log("------------");
+
+//ex-11
+let arr6 = [1,2,3,4,5,6,7,8,9];
+function filterEvennumbers(arr){
+    // let arr7 = [];
+    // arr.forEach(function(item,idx){
+    //     if(item%2===0){
+    //         arr7.push(item);
+    //     }
+    // })
+    // return arr7
+    return arr.filter(function (item,idx){
+        return item%2===0;
+    })
+}
+console.log(filterEvennumbers((arr6)));
+
+console.log("------------");
+
+//ex-12
+let arr7 = [-1,2,-3,-4,-5,-7,8,10,14];
+function getpositiveevennumber(arr){
+    return arr.filter(function(item,idx){
+        return (item>=0 && item%2===0);
+    })
+}
+console.log(getpositiveevennumber(arr7));
+//ex-13
+let arr8 = [-1,2,-3,-4,-5,-7,8,7,10,14];
+function getpositivenumber(arr){
+    return arr.filter(function(item,idx){
+        return item>=0;
+    })
+}
+console.log(getpositivenumber(arr8));
+
+//ex-14
+let arr9 = [{amount:100},{amount:200},{amount:400},{amount: 1600}];
+function accountsumarry(arr){
+    // let balance = 0;
+    // arr.forEach(function (item,idx){
+    //     balance = balance + item.amount;
+    // });
+    // return balance;
+    return arr.reduce(function (acc,item,idx){
+        acc += item.amount;
+        return acc;
+    },0);
+}
+console.log(accountsumarry(arr9));
+
+//ex-15
+
+const letters = ['c','h','a','m','p','s'];
+function combineLetters(arr){
+    return arr.reduce(function(acc,item,idx){
+        acc = acc + item;
+        return acc;
+    },"")
+}
+console.log(combineLetters((letters)));

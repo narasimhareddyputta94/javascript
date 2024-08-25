@@ -257,3 +257,10 @@ FetchBYID(5)
 // We then use the then method to handle the success case and the catch method to handle the failure case.
 // The output of the code will be:
 
+FetchBYID("5")
+    .then(function (todo) {
+    console.log(todo);
+    })
+    .catch(function (error) {
+    console.log(error);
+    });

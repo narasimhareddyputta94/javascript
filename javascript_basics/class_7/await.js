@@ -56,3 +56,53 @@ myFetch(5000,3)
     .catch(function(error){
         console.log(error);
     });
+
+myFetch(2000,5)
+    .then(function(response){
+        console.log(response);
+        return myFetch(3000,2);
+    })
+    .then(function(response){
+        console.log(response);
+        return myFetch(1000,10);
+    })
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+console.log("---------");
+
+
+async function getData(){
+
+    try{
+        const data1 = await myFetch(5000,3);
+        console.log(data1);
+        const data2 = await myFetch(3000,2);
+        console.log(data2);
+        const data3 = await myFetch(1000,10);
+        console.log(data3);
+    }
+    catch (error){
+        console.log(error);
+    }
+}
+
+getData();
+
+console.log("---------");
+Promise.all([myFetch(5000,3),myFetch(3000,2),myFetch(1000,1)])
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+Promise.allSettled([myFetch(5000,3),myFetch(3000,2),myFetch(1000,1)])
+    .then(function(response){
+        console.log(response);
+    });

@@ -106,3 +106,20 @@ Promise.allSettled([myFetch(5000,3),myFetch(3000,2),myFetch(1000,1)])
     .then(function(response){
         console.log(response);
     });
+
+console.log("---------");
+Promise.race([myFetch(5000,3),myFetch(3000,2),myFetch(1000,1)])
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+
+Promise.any([myFetch(5000,3),myFetch(3000,2),myFetch(1000,1)])
+    .then(function(response){
+        console.log(response);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
